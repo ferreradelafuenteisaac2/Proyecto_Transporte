@@ -10,6 +10,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
 import { AppComponent } from './app.component';
 import { CrearProductoComponent } from './components/crear-producto/crear-producto.component';
 import { ListarProductoComponent } from './components/listar-producto/listar-producto.component';
+import { ListarVehiculosComponent } from './components/listar-vehiculos/listar-vehiculos.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,12 @@ import { ListarProductoComponent } from './components/listar-producto/listar-pro
     HttpClientModule,
     HighchartsChartModule,
   ],
-  declarations: [AppComponent, CrearProductoComponent, ListarProductoComponent],
+  declarations: [
+    AppComponent,
+    CrearProductoComponent,
+    ListarProductoComponent,
+    ListarVehiculosComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
