@@ -11,10 +11,10 @@ export class ListarVehiculosComponent implements OnInit {
   vehiculos: Array<Vehiculo> = [];
   vehiculosApi = null;
   vehiculotmp: any;
-  constructor(private vehiculoService: TransporteService) {}
+  constructor(private TransporteService: TransporteService) {}
 
   getVehiculosApi() {
-    this.vehiculoService.getVehiculosApi().subscribe((vehiculos) => {
+    this.TransporteService.getVehiculosApi().subscribe((vehiculos) => {
       this.vehiculosApi = vehiculos;
       for (let _vehiculo of this.getVehiculosApi) {
         let e = new Vehiculo(
