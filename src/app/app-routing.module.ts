@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'aaa', component: ListarProductoComponent },
   { path: 'crear-producto', component: CrearProductoComponent },
   { path: 'editar-producto/:id', component: CrearProductoComponent },
-  { path: '', component: ListarVehiculosComponent}
+  { path: '', component: ListarVehiculosComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
