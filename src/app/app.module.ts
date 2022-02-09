@@ -22,11 +22,7 @@ import { ListarProductoComponent } from './components/listar-producto/listar-pro
     HttpClientModule,
     HighchartsChartModule,
   ],
-  declarations: [
-    AppComponent, 
-    CrearProductoComponent, 
-    ListarProductoComponent
-  ],
+  declarations: [AppComponent, CrearProductoComponent, ListarProductoComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

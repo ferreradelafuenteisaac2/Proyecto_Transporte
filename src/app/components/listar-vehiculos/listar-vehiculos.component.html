@@ -28,16 +28,16 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="vehiculo">
-                <td scope="row">{{ vehiculos.matricula }}</td>
-                <td scope="row">{{ vehiculos.numPlazas }}</td>
-                <td scope="row">{{ vehiculos.fechaInicio }}</td>
-                <td scope="row">{{ vehiculos.pagoTarjeta }}</td>
-                <td scope="row">{{ vehiculos.trabajadores }}</td>
-                <td scope="row">{{ vehiculos.tipoTren }}</td>
-                <td scope="row">{{ vehiculos.estaciones }}</td>
-                <td scope="row">{{ vehiculos.bano }}</td>
-                <td scope="row">{{ vehiculos.numPlantas }}</td>
+              <tr *ngFor="let vehiculo of listVehiculos">
+                <td scope="row">{{ vehiculo.Matricula }}</td>
+                <td scope="row">{{ vehiculo.numPlazas }}</td>
+                <td scope="row">{{ vehiculo.fechaInicio }}</td>
+                <td scope="row">{{ vehiculo.pagoTarjeta }}</td>
+                <td scope="row">{{ vehiculo.trabajadores }}</td>
+                <td scope="row">{{ vehiculo.tipoTren }}</td>
+                <td scope="row">{{ vehiculo.estaciones }}</td>
+                <td scope="row">{{ vehiculo.bano }}</td>
+                <td scope="row">{{ vehiculo.numPlantas }}</td>
                 <td>
                   <i class="fas fa-trash-alt"></i><i class="fas fa-edit"></i>
                 </td>

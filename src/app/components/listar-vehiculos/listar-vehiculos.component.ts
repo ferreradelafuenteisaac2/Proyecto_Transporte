@@ -8,28 +8,22 @@ import { TransporteService } from '../../services/transporte.service';
   styleUrls: ['./listar-vehiculos.component.css'],
 })
 export class ListarVehiculosComponent implements OnInit {
-  vehiculos: Array<Vehiculo> = [];
-  vehiculosApi = null;
-  vehiculotmp: any;
+  listVehiculos: Vehiculo[] = [];
   constructor(private TransporteService: TransporteService) {}
 
-  getVehiculosApi() {
-    this.TransporteService.getVehiculosApi().subscribe((vehiculos) => {
-      this.vehiculosApi = vehiculos;
-      for (let _vehiculo of this.getVehiculosApi) {
-        let e = new Vehiculo(
-          vehiculos.matricula,
-          vehiculos.numPlazas,
-          vehiculos.fechaInicio,
-          vehiculos.pagoTarjeta,
-          vehiculos.Trabajador
-        );
-        vehiculos.push(e);
+  ObtenerVehiculos() {
+    this.TransporteService.getVehiculosApi().subscribe(
+      (data) => {
+        console.log(data);
+        this.listVehiculos = data;
+      },
+      (error) => {
+        console.log(error);
       }
-    });
+    );
   }
 
-  ngOnInit() {
-    this.getVehiculosApi();
+  ngOnInit(): void {
+    this.ObtenerVehiculos();
   }
 }
