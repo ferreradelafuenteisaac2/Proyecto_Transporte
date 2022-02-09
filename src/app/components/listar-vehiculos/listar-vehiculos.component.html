@@ -1,0 +1,51 @@
+<p>listar-vehiculos works!</p>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col lg-8 offset-lg-2">
+      <div class="card">
+        <div class="card-body text-center">
+          <span class="titulo"><strong> LISTA DE VEHICULOS </strong></span>
+          <button
+            class="btn btn-success float-end"
+            routerLink="/añadir-vehiculo"
+          >
+            NUEVO
+          </button>
+          <table class="table table-stripped mt-3">
+            <thead>
+              <tr>
+                <th scope="col">Matricula</th>
+                <th scope="col">Nº Plazas</th>
+                <th scope="col">Fecha inicio</th>
+                <th scope="col">Pago Tarjeta</th>
+                <th scope="col">Trabajadores</th>
+                <th scope="col">Tipo Tren</th>
+                <th scope="col">Estaciones</th>
+                <th scope="col">Baño</th>
+                <th scope="col">Num Plantas</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="vehiculo">
+                <td scope="row">{{ vehiculos.matricula }}</td>
+                <td scope="row">{{ vehiculos.numPlazas }}</td>
+                <td scope="row">{{ vehiculos.fechaInicio }}</td>
+                <td scope="row">{{ vehiculos.pagoTarjeta }}</td>
+                <td scope="row">{{ vehiculos.trabajadores }}</td>
+                <td scope="row">{{ vehiculos.tipoTren }}</td>
+                <td scope="row">{{ vehiculos.estaciones }}</td>
+                <td scope="row">{{ vehiculos.bano }}</td>
+                <td scope="row">{{ vehiculos.numPlantas }}</td>
+                <td>
+                  <i class="fas fa-trash-alt"></i><i class="fas fa-edit"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
