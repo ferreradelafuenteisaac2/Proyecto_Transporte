@@ -16,19 +16,20 @@ export class ListarVehiculosComponent implements OnInit {
   getVehiculosApi() {
     this.vehiculoService.getVehiculosApi().subscribe((vehiculos) => {
       this.vehiculosApi = vehiculos;
-      for (let _vehiculo of this.getVehiculosApi) {}
-    }
-    let e = new Vehiculo(
-      vehiculo.matricula,
-      vehiculo.numPlazas,
-      vehiculo.fechaInicio,
-      vehiculo.pagoTarjeta,
-      vehiculo.Trabajador,
-      Vehiculo.vehiculo
-    );
-    this.vehiculos.push(e)
+      for (let _vehiculo of this.getVehiculosApi) {
+        let e = new Vehiculo(
+          vehiculos.matricula,
+          vehiculos.numPlazas,
+          vehiculos.fechaInicio,
+          vehiculos.pagoTarjeta,
+          vehiculos.Trabajador
+        );
+        vehiculos.push(e);
+      }
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getVehiculosApi();
+  }
 }
