@@ -9,7 +9,7 @@ export class TransporteService {
   constructor(private http: HttpClient) {}
 
   getVehiculosApi(): Observable<any> {
-    const url = `${this.url}/vehiculos`;
+    const url = `${this.url}/trenes`;
     return this.http.get(url);
   }
 
