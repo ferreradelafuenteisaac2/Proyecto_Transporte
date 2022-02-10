@@ -27,11 +27,11 @@ export class Autobus extends Vehiculo {
     this._tipoBus = tipoBus;
   }
 
-  get baño(): boolean {
-    return this._baño;
+  get bano(): boolean {
+    return this._bano;
   }
-  set baño(baño: boolean) {
-    this._baño = baño;
+  set bano(bano: boolean) {
+    this._bano = bano;
   }
 
   get numPlantas(): number {

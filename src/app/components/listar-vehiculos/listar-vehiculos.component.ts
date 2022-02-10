@@ -10,7 +10,7 @@ import { TransporteService } from '../../services/transporte.service';
 export class ListarVehiculosComponent implements OnInit {
   listVehiculos: Vehiculo[] = [];
   constructor(private TransporteService: TransporteService) {}
-
+  /*
   ObtenerVehiculos() {
     this.TransporteService.getVehiculosApi().subscribe(
       (data) => {
@@ -21,6 +21,12 @@ export class ListarVehiculosComponent implements OnInit {
         console.log(error);
       }
     );
+  }*/
+
+  ObtenerVehiculos() {
+    this.TransporteService.getVehiculosApi().subscribe((data) => {
+      this.listVehiculos = data;
+    });
   }
 
   ngOnInit(): void {
