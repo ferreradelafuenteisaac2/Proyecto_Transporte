@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { CrearProductoComponent } from './components/crear-producto/crear-producto.component';
 import { ListarProductoComponent } from './components/listar-producto/listar-producto.component';
 import { ListarVehiculosComponent } from './components/listar-vehiculos/listar-vehiculos.component';
+import { ListarTrenesComponent } from './components/listar-trenes/listar-trenes.component';
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ import { ListarVehiculosComponent } from './components/listar-vehiculos/listar-v
     CrearProductoComponent,
     ListarProductoComponent,
     ListarVehiculosComponent,
+    ListarTrenesComponent,
   ],
   bootstrap: [AppComponent],
 })

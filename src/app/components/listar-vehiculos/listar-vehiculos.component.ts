@@ -24,7 +24,7 @@ export class ListarVehiculosComponent implements OnInit {
   }*/
 
   ObtenerVehiculos() {
-    this.TransporteService.getVehiculosApi().subscribe((data) => {
+    this.TransporteService.getTrenes().subscribe((data) => {
       this.listVehiculos = data;
     });
   }

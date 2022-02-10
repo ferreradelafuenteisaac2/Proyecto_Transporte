@@ -8,42 +8,81 @@ export class TransporteService {
   private url = 'http://localhost:3000';
   constructor(private http: HttpClient) {}
 
-  getVehiculosApi(): Observable<any> {
+  // GET
+  getTrenes(): Observable<any> {
     const url = `${this.url}/trenes`;
     return this.http.get(url);
   }
 
-  addVehiculo(doc: any) {
-    const url = `${this.url}/vehiculo`;
-    return this.http.post(url, doc);
+  getAutobus(): Observable<any> {
+    const url = `${this.url}/autobuses`;
+    return this.http.get(url);
   }
 
-  postTrabajador(doc: any) {
-    const url = `${this.url}/trabajador`;
-    return this.http.post(url, doc);
+  getConductores(): Observable<any> {
+    const url = `${this.url}/conductores`;
+    return this.http.get(url);
   }
 
-  getTrabajador(doc: any) {
+  getMecanicos(): Observable<any> {
+    const url = `${this.url}/mecanicos`;
+    return this.http.get(url);
+  }
+
+  getTrabajador(doc: any): Observable<any> {
     const url = `${this.url}/trabajador/${doc.nombre}/${doc.apellidos}`;
     return this.http.get(url, doc);
   }
 
-  updateVehiculo(doc: any) {
-    const url = `${this.url}/vehiculo/${doc.matricula}`;
+  // POST
+  postConductor(doc: any): Observable<any> {
+    const url = `${this.url}/conductor`;
+    return this.http.post(url, doc);
+  }
+
+  postMecanico(doc: any): Observable<any> {
+    const url = `${this.url}/mecanico`;
+    return this.http.post(url, doc);
+  }
+
+  postTren(doc: any): Observable<any> {
+    const url = `${this.url}/tren`;
+    return this.http.post(url, doc);
+  }
+
+  postAutobus(doc: any): Observable<any> {
+    const url = `${this.url}/autobus`;
+    return this.http.post(url, doc);
+  }
+
+  // PUT
+  updateTren(doc: any): Observable<any> {
+    const url = `${this.url}/updateTren/${doc.matricula}`;
     return this.http.put(url, doc);
   }
 
-  updateTrabajador(doc: any) {
+  updateAutobus(doc: any): Observable<any> {
+    const url = `${this.url}/updateAutobus/${doc.matricula}`;
+    return this.http.put(url, doc);
+  }
+
+  updateConductor(doc: any): Observable<any> {
     const url = `${this.url}/updateTrabajador/${doc.DNI}/`;
     return this.http.put(url, doc);
   }
 
-  deleteTrabajador(DNI: string) {
+  updateMecanico(doc: any): Observable<any> {
+    const url = `${this.url}/updateTrabajador/${doc.DNI}/`;
+    return this.http.put(url, doc);
+  }
+
+  // DELETE
+  deleteTrabajador(DNI: string): Observable<any> {
     const url = `${this.url}/deleteTrabajador/${DNI}`;
     return this.http.delete(url);
   }
 
-  deleteVehiculo(matricula: number) {
+  deleteVehiculo(matricula: number): Observable<any> {
     const url = `${this.url}/deleteVehiculo/${matricula}/`;
     return this.http.delete(url);
   }
